@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+}
+
+.container{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+.form-log{
+    position: relative;
+    height: 50%;
+    width: 450px;
+    border-radius: 50px;
+    overflow:visible;
+    display: flex;
+    justify-content: center;
+    border-radius: 60px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.form-log::before{
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 12px dotted rgb(104, 163, 173);
+    border-radius: 72px;
+    pointer-events: none;
+    animation: spin 30s linear infinite;
+
+}
+@keyframes spin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check a{
+    color: black;
+    text-decoration: none;
+}
+.check{
+    width: 90%;
+    margin-top: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.field{
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:8px;
+}
+
+.field input:focus{
+    background-color: rgb(245, 252, 250);
+    border: 1px solid white ;
+}
+.field input:placeholder-shown{
+    opacity: 0.78;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+}
+
+.input-box i{
+    position:absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 14px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 35px;
+    padding-left: 35px;
+    border-radius: 5px;
+    margin-top: 3px;
+    border: 1px solid white;
+    border-radius: 13px 3px;
+    box-shadow: 3px 3px 10px rgba(180, 231, 240, 0.993);
+    background-color: rgb(225, 247, 247);
+}
+
+.button-register{
+    margin-top: 35px;
+}
+
+.button-register button{
+    width: 140px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgb(216, 207, 207);
+    border-radius: 20px 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.button-register button:active {
+    transform: scale(0.95); 
+    background-color: rgb(160, 200, 200);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.button-register button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+} 
